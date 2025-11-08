@@ -1,0 +1,31 @@
+
+.header {
+    padding: 20px 5%;
+    background-color: transparent;
+    margin-bottom: 80px;
+}
+nav.menu-aberto {
+    width: 50vw;
+    height: 80vh;
+}
+.home-content {
+    gap: 60px;
+    margin: 40px 0;
+}
+.home {
+    padding: 40px 5%;
+}
+.apresentacao {
+    flex-basis: 30vw;
+}
+.home-content p {
+    font-size: 19px;
+    margin: 20px 0 40px;
+}
+
+.minha-imagem {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}

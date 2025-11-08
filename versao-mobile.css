@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+.header{
+    margin-bottom: 80px;
+    padding: 20px 5%;
+}
+.logo {
+    width: 65px;
+    height: 65px;
+    font-size: 1.1em;
+}
+
+header #menu{
+    font-size: 28px;
+    border: 0;
+    display: block;
+    margin-right: 0px;
+}
+header #menu img{
+    width: 30px;
+}
+nav.menu-aberto {
+    width: 70vw;
+    height: 80vh;
+}
+#fechar-menu{
+    display: block;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.769);
+    z-index: 999;
+    transition: all .8s;
+}
+.navbar a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    margin-left: 0;
+    padding: 10px 80px;
+    line-height: 2em;
+    color: #fff;
+    z-index: 999;
+}
+.navbar a:hover{
+    background-color: #00abf0;
+    color: black;
+}
+
+/* ESTILO DA PATRE TEXTUAL*/
+.home {
+    height: 100%;
+    padding: 40px 4%;
+    margin: 60px 0;
+    align-items: center;
+}
+.home-content{
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: 40px 20px;
+    overflow-x: hidden;
+}
+.home-content h1 {
+    position: relative;
+    font-size: 46px;
+    line-height: 1.2em;
+}
+
+.apresentacao {
+    flex-basis: auto;
+    order: 1;
+}
+.home-content h1 {
+    position: relative;
+    font-size: 45px;
+    line-height: 1.4em;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.home-content h1::before {
+    display: none;
+}
+
+.home-content h3 {
+    position: static;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h3::before {
+    display: none;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    line-height: 1.8em;
+}
+
+.home-content p::before {
+    display: none;
+}
+.home-content .btn-box {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 110px;
+    margin: 40px auto;
+}
+.home-content .btn-box::before {
+    display: none;
+}
+
+.btn-box a {  
+    width: 200px;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 600;
+   
+}
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+    width: 200px;
+    font-size: 18px;
+}
+
+
+/*ESTILO DA IMAGEM*/
+.minha-imagem {
+    position: relative;
+    max-width: 70vw;
+    max-height: 70vw;
+}
+.home-sci {
+    margin: 20px auto;
+}
+.home-imgHover {
+    display: none;
+}
+
+.home-imgHover:hover {
+    display: none;
+}
+
+.home-imgHover::after {
+    display: none;
+    
+}
+

@@ -153,6 +153,7 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    overflow: hidden;
     z-index: 99;
 }
 
@@ -192,7 +193,7 @@ section {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 38rem;
+    width: 40rem;
     height: 5rem;
 }
 
@@ -261,13 +262,6 @@ section {
 .minha-imagem img {
     width: 100%;
     height: 100%;
-}
-
-@media screen and (max-width:375px) {
-    .minha-imagem {
-        width: 71vw;
-        height: 71vw;
-    }
 }
 
 .minha-imagem::before {
@@ -364,7 +358,6 @@ section {
     }
 }
 
-/*ESTILO FOOTER*/
 #criado-por {
     background-color: #081b29c1;
     z-index: 300;
@@ -406,9 +399,8 @@ section {
 
 .sobre {
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
     align-items: center;
-    flex-direction: column;
     gap: 2rem;
     background-color: var(--cor-fundo-secundario);
     padding-bottom: 6rem;
@@ -421,29 +413,32 @@ section {
     text-align: center;
 }
 
+.sobre .heading {
+    display: block;
+    flex: 1 1 100%;
+}
+
 span {
     color: var(--cor-principal);
 }
 
 .about-img {
     position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
+    flex: 0.5 .1 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    margin: auto;
 }
 
 .about-img:hover img {
-    transform: scale(1.2);
+    transform: scale(1.01);
 }
 
 .about-img img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 .about-img .circle-spin {
@@ -462,12 +457,11 @@ span {
 }
 
 .about-content {
-    text-align: center;
+    flex: 1 1 50%;
 }
 
 .about-content h3 {
     position: relative;
-    display: inline-block;
     font-size: 2.6rem;
 }
 
@@ -475,6 +469,7 @@ span {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    line-height: 1.3em;
 }
 
 .btn-box.btns {
@@ -541,11 +536,13 @@ span {
     background-color: var(--cor-principal);
 
 }
-.esticar{
-    animation: esticar 3s ease-in-out ;
+
+.esticar {
+    animation: esticar 3s ease-in-out;
 }
-@keyframes esticar{
-    0%{
+
+@keyframes esticar {
+    0% {
         height: 0;
     }
 }
@@ -708,7 +705,7 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 30%;
+    width: 40%;
 
 }
 
@@ -816,7 +813,9 @@ span {
 
     .home {
         padding: 0 4%;
+        padding-bottom: 5rem;
     }
+    
 
     .footer {
         padding: 2rem 4%;
@@ -888,7 +887,34 @@ span {
     }
 }
 
-@media (max-width:520px) {
+
+@media screen and (max-width:600px) {
+    .home-content .btn-box {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        height: 110px;
+        margin: 40px auto;
+    }
+
+    .btn-box a {
+        width: 200px;
+        height: 100%;
+        font-size: 18px;
+        font-weight: 600;
+
+    }
+
+    .sobre .btn-box {
+        display: block;
+        margin-left: 39%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:520px) {
     html {
         font-size: 50%;
     }
@@ -964,10 +990,18 @@ span {
     opacity: 1;
     transform: translateY(0);
     transition: 2s;
+    animation-delay: .5s;
 }
 
 .ocultar {
     transform: translateY(30px);
     opacity: 0;
     transition: 2s;
+}
+
+@media screen and (max-width:375px) {
+    .minha-imagem {
+        width: 71vw;
+        height: 71vw;
+    }
 }

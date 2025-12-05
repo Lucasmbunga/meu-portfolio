@@ -142,6 +142,14 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+section:nth-child(even) {
+    background-color: var(--cor-fundo-secundario);
+}
+
+section:nth-child(odd) {
+    background-color: var(--cor-fundo);
+}
+
 .home {
     padding: 0 9%;
     margin: 150px 0;
@@ -481,6 +489,90 @@ span {
     background-color: var(--cor-fundo-secundario);
 }
 
+/*SEÇÃO DE PROJETOS*/
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    padding-bottom: 5em;
+    background-color: var(--cor-fundo);
+}
+
+#projetos>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 2em;
+}
+
+#projetos .projeto {
+    flex: .5 .3 300px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    padding-bottom: 3em;
+    border-radius: 15px;
+    border: 2px solid var(--cor-principal);
+}
+
+.projeto img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px 15px 0 0;
+}
+
+.projeto h3 {
+    font-size: 2em;
+    padding: 0 1.5em;
+}
+
+.projeto p {
+    font-size: 1.5em;
+    padding: 0 2em;
+    line-height: 1.2em;
+}
+
+.projeto a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    border-radius: 10px;
+    margin-left: 2em;
+    padding: 1em 1.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: 2px solid var(--cor-principal);
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    z-index: 0;
+}
+.projeto a:hover{
+    transform: scale(1.1);
+    color: var(--cor-principal);
+}
+.projeto a::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor-fundo);
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+.projeto a:hover::before{
+    width: 100%;
+}
+
+/*SEÇÃO DE EDUCAÇÃO*/
+
 .educacao {
     display: flex;
     justify-content: center;
@@ -488,6 +580,7 @@ span {
     flex-direction: column;
     min-height: auto;
     padding: 5rem;
+    background-color: var(--cor-fundo-secundario);
 }
 
 .educacao .education-row {
@@ -815,7 +908,7 @@ span {
         padding: 0 4%;
         padding-bottom: 5rem;
     }
-    
+
 
     .footer {
         padding: 2rem 4%;
